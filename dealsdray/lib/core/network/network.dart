@@ -49,4 +49,50 @@ abstract class NetworkClient {
 
     return null;
   }
+
+  static Future<http.Response?> post(
+      {required String endPoint, dynamic body}) async {
+    var response = await http.post(
+      Uri.parse('$appDomain$endPoint'),
+      body: body,
+    );
+
+    if (response.statusCode == NetworkStatus.status200.statusCode) {
+      return response;
+    } else if (response.statusCode == NetworkStatus.status400.statusCode) {
+      try {
+        BrandDialog.showDialogs(
+            context: NavigationService.scaffoldMessengerKey.currentContext!,
+            message: NetworkStatus.status400.message);
+      } catch (e) {
+        rethrow;
+      }
+    } else if (response.statusCode == NetworkStatus.status401.statusCode) {
+      try {
+        BrandDialog.showDialogs(
+            context: NavigationService.scaffoldMessengerKey.currentContext!,
+            message: NetworkStatus.status401.message);
+      } catch (e) {
+        rethrow;
+      }
+    } else if (response.statusCode == NetworkStatus.status429.statusCode) {
+      try {
+        BrandDialog.showDialogs(
+            context: NavigationService.scaffoldMessengerKey.currentContext!,
+            message: NetworkStatus.status429.message);
+      } catch (e) {
+        rethrow;
+      }
+    } else if (response.statusCode == NetworkStatus.status500.statusCode) {
+      try {
+        return BrandDialog.showDialogs(
+            context: NavigationService.scaffoldMessengerKey.currentContext!,
+            message: NetworkStatus.status500.message);
+      } catch (e) {
+        rethrow;
+      }
+    }
+
+    return null;
+  }
 }

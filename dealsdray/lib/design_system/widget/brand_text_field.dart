@@ -1,5 +1,5 @@
-import 'package:dealsdray/src/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../label/label.dart';
 
@@ -8,6 +8,8 @@ class BrandTextField extends StatelessWidget {
   final bool obscureText;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
+  final List<TextInputFormatter> inputFormatters;
+  final TextInputType? keyboardType;
 
   const BrandTextField({
     super.key,
@@ -16,6 +18,8 @@ class BrandTextField extends StatelessWidget {
     this.errorString,
     this.validator,
     this.controller,
+    this.keyboardType,
+    this.inputFormatters = const [],
   });
 
   @override
@@ -30,21 +34,11 @@ class BrandTextField extends StatelessWidget {
             }
             return null;
           },
+      inputFormatters: inputFormatters,
+      keyboardType:keyboardType ,
       decoration: InputDecoration(
-        filled: true,
+        filled: false,
         fillColor: Colors.white,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: const BorderSide(color: AppColor.white, width: 0.0),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: const BorderSide(color: AppColor.transparent, width: 0.0),
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: const BorderSide(color: AppColor.transparent, width: 0.0),
-        ),
         hintText: hintText,
       ),
     );

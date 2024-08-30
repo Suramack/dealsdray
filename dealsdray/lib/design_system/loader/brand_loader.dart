@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BrandLoader extends StatelessWidget {
-  const BrandLoader({super.key});
+class BrandCircularProgressWidget extends StatelessWidget {
+  const BrandCircularProgressWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

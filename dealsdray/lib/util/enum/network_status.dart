@@ -9,3 +9,13 @@ enum NetworkStatus {
   final int statusCode;
   final String message;
 }
+
+
+enum ActionStatus{
+    success(code: 1, message: 'OK'),
+    failure(code: 2, message: 'OK');
+ 
+  const ActionStatus({required this.code, required this.message});
+  final int code;
+  final String message;
+}

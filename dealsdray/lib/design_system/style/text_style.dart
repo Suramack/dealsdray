@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class BrandTextStyle extends TextStyle {
   static const brandTextStyle1 = TextStyle(
-    fontSize: BrandFontSize.heeadline1,
+    fontSize: BrandFontSize.headline1,
     color: AppColor.black,
     fontWeight: FontWeight.w400,
   );

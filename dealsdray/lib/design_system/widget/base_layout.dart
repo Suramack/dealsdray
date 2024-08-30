@@ -16,7 +16,7 @@ class BaseLayout extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColor.greyFD,
         appBar: appBar,
-        resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: true,
         body: child,
       ),
     );

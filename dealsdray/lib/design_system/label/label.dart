@@ -2,10 +2,12 @@ abstract class Strings {
   static const phone = 'Phone';
   static const name = 'Name';
   static const yourEmail = 'Your email';
+  static const email = 'Email';
   static const createPassword = 'Create Password';
   static const confirmPassword = 'Confirm password';
   static const gladToSeeYou = 'Glad to see you!';
   static const pleaseProvideYourPhoneNumer = 'Please provide your phone number';
+  static const pleaseProvideYourPhoneEmail = 'Please provide your phone email';
   static const pleaseEnterAValidEmail = 'Please enter a valid email';
   static const pleaseEnterName = 'Please enter name ';
   static const pleaseEnterEmail = 'Please enter email';
@@ -13,7 +15,7 @@ abstract class Strings {
   static const somethingWentWrong = 'Somthing went wrong';
   static const sendCode = 'SEND CODE';
   static const otpverification = 'OTP Verification';
-  static const weHaveSentAUniqueOTPNumber = 'We have sent a unique OTP number to your phone number';
+  static const weHaveSentAUniqueOTPNumber = 'We have sent a unique OTP number to your phone number +91-';
   static const sendAgain='SEND AGAIN';
   static const letsBegin="Let's Begin!";
   static const pleaseEnterYourCredentianToPro="Please enter your credentials to proceed";
@@ -22,6 +24,8 @@ abstract class Strings {
   static const ok='OK';
   static const message='Message';
   static const requiredField='Required Field';
+  static const home='Home';
+  static const pleaseWait='Please wait...';
 
   
 }

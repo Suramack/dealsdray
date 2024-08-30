@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class BrandDialog {
-  static showDialogs({required BuildContext context, String? message}) {
+  static showDialogs({required BuildContext context, String? message}) async {
+    await Future.delayed(Duration(seconds: 3));
     return showDialog(
       context: context,
       builder: (context) {
